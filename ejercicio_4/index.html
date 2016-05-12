@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tablas</title>
+        <style media="screen">
+            table,tr,td,th{
+                border: 1px solid green;
+                padding: 3px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Una primera tabla</h1>
+        <table>
+            <tr>
+                <th>Album</th>
+                <th>Year</th>
+            </tr>
+            <tr>
+                <td>Rober Sould</td>
+                <td>1998</td>
+            </tr>
+            <tr>
+                <td>Rober Sould</td>
+                <td>1998</td>
+            </tr>
+            <tr>
+                <td>Rober Sould</td>
+                <td>1998</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Uniendo Celdas horizontales</h1>
+        <table>
+            <tr>
+                <td>7:30pm</td>
+                <td>7:30pm</td>
+                <td>8:30pm</td>
+            </tr>
+            <tr>
+                <td colspan="3">the sunday nigth movie</td>
+            </tr>
+            <tr>
+                <td>Katty Perry</td>
+                <td>Jacob Black</td>
+                <td>Jobs Steve</td>
+            </tr>
+            <tr>
+                <td>Bonanza</td>
+                <td colspan="2">Otras cosas que no se</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Uniendo Celdas verticales</h1>
+        <table>
+            <tr>
+                <td>apples</td>
+                <td rowspan="3">orange</td>
+                <td>peras</td>
+            </tr>
+            <tr>
+                <td>banana</td>
+                <td rowspan="2">pineaple</td>
+            </tr>
+            <tr>
+                <td>lechuga</td>
+            </tr>
+        </table>
+        <hr>
+        <h1>Uniendo todo</h1>
+        <table>
+            <caption>Your content here</caption>
+            <tr>
+                <td rowspan="2"> </td>
+                <th colspan="2">cosas para ser saludable</th>
+                <th rowspan="2">Header 3</th>
+            </tr>
+            <tr>
+                <th>Header 1</th>
+                <th>Header 2</th>
+            </tr>
+            <tr>
+                <th>Thing A</th>
+                <td>Data A1</td>
+                <td>Data A2</td>
+                <td>Data A3</td>
+            </tr>
+            <tr>
+                <th>Thing B</th>
+                <td>Data A1</td>
+                <td>Data A2</td>
+                <td>Data A3</td>
+            </tr>
+            <tr>
+                <th>Thing C</th>
+                <td>Data A1</td>
+                <td>Data A2</td>
+                <td>Data A3</td>
+            </tr>
+        </table>
+        <hr>
+    </body>
+</html>

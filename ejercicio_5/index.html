@@ -1,0 +1,58 @@
+<!DOCTYPE html >
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulario de Concurso Nikel</title>
+    <style type="text/css">
+        ol,ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Concurso &ldquo;Cambia tus viejos zapatos!&rdquo;</h1>
+    <p>Quieres cambiar tus viejos zapatos por un par nuevo de zapatos Nikel
+        <em>totalmente gratis</em>? Bueno esta es tu oportunidad, llena el
+        siguiente formulario y dinos por que deberiamos de cambiar tus
+        zapatos...</p>
+
+    <form class="form1" action="index.html" method="post">
+        <fieldset>
+            <legend><p>Información Básica</p></legend>
+            <ul>
+                <li>Nombre:</li><input type="text" name="nombre">
+                <li>Correo Electronico:</li><input type="email" name="correo">
+                <li>Ciudad:</li><input type="text" name="ciudad">
+                <li>Describe tus viejos zapatos…</li><textarea rows="4" cols="50"></textarea>
+            </ul>
+        </fieldset>
+
+        <h2>Diseña tus zapatos Nikel:</h2>
+        <fieldset>
+            <legend><p>Diseño Personalizado</p></legend>
+            <p>Color <em>(escoge uno)</em>:</p>
+            <ul>
+                <li><input type="radio" name="color" value="" checked>Rojo</li>
+                <li><input type="radio" name="color" value="">Azul</li>
+                <li><input type="radio" name="color" value="">Negro</li>
+                <li><input type="radio" name="color" value="">Plateado</li>
+            </ul>
+
+            <p>Caracteristicas <em>(Puedes escoger muchos)</em></p>
+            <ul>
+                <li><input type="checkbox" name="caracteristica1" value="">Cordones brillantes</li>
+                <li><input type="checkbox" name="caracteristica3" value="">Logo Metalico</li>
+                <li><input type="checkbox" name="caracteristica3" value="">Talones psicodelicos</li>
+                <li><input type="checkbox" name="caracteristica4" value="">Con soporte bluetooth</li>
+            </ul>
+            <p>Talla</p>
+            <p>Talla (Hombre o Mujer):<input type="text" name="talla-text" value=""></p>
+            <p>Talla (Numero):<input type="number" name="talla-num" value=""></p>
+        </fieldset>
+        <input type="submit" name="Enviar" value="Envair"><br><br>
+    </form>
+</body>
+</html>
