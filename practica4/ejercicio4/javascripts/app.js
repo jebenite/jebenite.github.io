@@ -7,7 +7,7 @@ var main = function(){
 		respuesta.items.forEach(function(item){
 			var $img=$("<img>");
 			$img.attr("src",item.media.m);
-			$("main .photos").append($img);//ojo con el espacio
+			$("main .photos").append($img);
 			$img.fadeIn();
 		});
 		});
