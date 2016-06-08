@@ -1,0 +1,63 @@
+<!doctype html>
+ 
+<html>
+<head>
+
+	<title>GitHub</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+</head>
+<body>
+	<header>
+		<h1>Checka perfiles de github!</h1>
+		 
+	</header>
+	<main >
+		
+		<select id="combobox" >
+		  <!-- <option value="octocat" onclick="javascript:alert('1');">octocat</option>
+		  <option value="mojombo">mojombo</option>
+		  <option value="presidentobama">presidentobama</option>
+		  <option value="coding-horror">coding-horror</option>
+		  <option value="jebenite">jebenite</option>-->
+		</select>
+		<div class="datos">
+		<img id=imagen></img>
+		</div>
+		Todos los derechos reservados
+	</main>
+	<section >
+		<div class="info"><p id ="ciudad"></p></div>
+		<i class="fa fa-git" aria-hidden="true"></i> <i id="repos"></i><br>
+		<i class="fa fa-users" aria-hidden="true"></i><i id="seguidores"></i>
+	</section>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="javascripts/app.js"></script>
+	<script >
+		
+		
+			var xhttp=new XMLHttpRequest();
+			xhttp.onreadystatechange=function(){
+				if(xhttp.readyState==4 && xhttp.status==200){
+					var json=JSON.parse(xhttp.responseText);
+					
+					var combo=document.getElementById("combobox");
+					json.forEach(function(user){
+						console.log(user.usuario);
+					var element=document.createElement("option");
+					
+					element.textContent=user.usuario;
+					
+					combo.appendChild(element);
+					}
+					);
+					
+				}
+			};
+			xhttp.open("GET","usuarios.json",true);
+			xhttp.send();
+		
+	</script>
+</body>
+</html>
