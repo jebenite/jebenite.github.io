@@ -1,5 +1,6 @@
 body{
   background-color: #f2f2f2;
+  
 }
 #contact{
   color:black;
@@ -7,6 +8,25 @@ body{
 #titulo{
 
   color:black;
+  font-size: small;
+  padding-top: 100px;
+}
+.form-horizontal{
+  background-color:#e6e6e6;
+}
+#btnPublicar{
+  color:white;
+  background-color: yellowgreen;
+}
+.header {
+    background-color: yellowgreen;
+    color: white;
 
-  padding-top: 150px;
+    font-size: 27px;
+    padding: 10px;
+}
+div#form.container{
+  margin-top: 50px;
+
+
 }

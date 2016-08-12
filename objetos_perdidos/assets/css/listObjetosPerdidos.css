@@ -1,0 +1,53 @@
+a.btn{
+  color:white;
+  margin-bottom:2%;
+}
+  background-color: #f2f2f2;
+
+}
+button.btn.btn-default{
+  color:white;
+}
+
+#contact{
+  color:black;
+}
+#titulo{
+  color: black;
+  font-size: small;
+  margin:0 auto;
+  padding-top: 90px;
+}
+div.wrapper{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+div.fresh-table{
+  color:black;
+  background-color: yellowgreen;
+  font-size: small;
+}
+
+a.table-action.like{
+  display: none;
+}
+a.table-action.remove
+{
+  display: none;
+}
+
+#preview {
+
+
+  margin-bottom: 3%;
+	height:200px;
+  width:200px;
+	border:black solid;
+}
+
+div.modal-content {
+  background-color: yellowgreen;
+  font-style: italic;
+   font-size: 100%;
+  color: white;
+}
