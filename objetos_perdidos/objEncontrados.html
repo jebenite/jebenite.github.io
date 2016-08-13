@@ -10,9 +10,11 @@
     <title>L&F-Gestión de objetos perdidos</title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" />
+      <link href="assets/css/listObjetosPerdidos.css" rel="stylesheet"/>
+    <link href="assets/css/gaia.css" rel="stylesheet"/>
 
-    <link href="assets/css/publicar.css" rel="stylesheet"/>
-      <link href="assets/css/gaia.css" rel="stylesheet"/>
+
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 
     <!--     Fonts and icons     -->
@@ -23,6 +25,7 @@
 
     <script type="text/javascript" src="assets/js/gaia.js"></script>
 
+    <script type="text/javascript" src="assets/js/bootstrap-table.js"></script>
 
 </head>
 
@@ -47,10 +50,7 @@
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav navbar-right navbar-uppercase">
                     <li>
-                        <a href="#" class="btn btn-danger btn-fill" >Publicar un Objeto</a>
-                    </li>
-                    <li>
-                        <a href="listObjPerdidos.html" class="btn btn-danger btn-fill">Lista de Objetos perdidos</a>
+                        <a href="publicar.html" class="btn btn-danger btn-fill" >Publicar un Objeto</a>
                     </li>
                     <li class="dropdown">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -97,7 +97,8 @@
                     <div class="title-area" align="center">
                         <p></p>
                         <h1 class="title-modern">LOST & FOUND </h1>
-                        <h2>Plubica algún objeto</h2>
+
+                        <h2 id="sub" ><b>Perdiste algo?</b>.Seguramente alguien lo ha encontrado.</h2>
 
                         <div class="separator line-separator">♦</div>
                     </div>
@@ -108,65 +109,102 @@
             </div>
         </div>
 
-        <div class="container" id="form" aling="center">
-          <div class="col-md-2"></div>
-          <div class="col-md-12">
-              <div class="well well-sm">
-                  <form class="form-horizontal" method="post">
-                      <fieldset>
-                          <legend class="text-center header">Datos importantes del objeto</legend>
-                          <div class="form-group">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="fname" name="name" type="text" placeholder="¿Qué objeto es?-Obligatorio" class="form-control" required>
-                              </div>
-                          </div>
+        <div class="wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ">
 
-
-                          <div class="form-group">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="lname" name="name" type="text" placeholder="Modelo del objeto" class="form-control" >
-                              </div>
-                          </div>
-                          <div class="form-group ">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="" name="email" type="date"  class="form-control" required>
-                              </div>
-                          </div>
-
-
-                          <div class="form-group ">
-                              <div class="col-md-10 col-md-offset-1">
-                                  Hora <input id="horaIngreso" name="email" type="time" placeholder="Hora" class="form-control" >
-                              </div>
-                          </div>
+                        <div class="fresh-table">
+                        <!--    Available colors for the full background: full-color-blue, full-color-azure, full-color-green, full-color-red, full-color-orange
+                                Available colors only for the toolbar: toolbar-color-blue, toolbar-color-azure, toolbar-color-green, toolbar-color-red, toolbar-color-orange
+                        -->
 
 
 
-                          <div class="form-group">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="phone" name="phone" type="text" placeholder="Lugar" class="form-control" >
-                              </div>
-                          </div>
+                            <table id="fresh-table" class="table">
+                                <thead>
+
+
+                                	<th data-field="salary" data-sortable="true">Lugar</th>
+                                	<th data-field="country" data-sortable="true">Fecha</th>
+                                	<th data-field="city">Hora</th>
+                                	<th data-field="actions" data-formatter="operateFormatter" data-events="operateEvents">Actions</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+
+
+                                    	<td>Malecón 2000</td>
+                                    	<td>12/09/2106</td>
+                                    	<td>De tarde</td>
+
+                                    </tr>
+                                    <tr>
+
+
+                                    	<td>ESPOL-FIEC</td>
+                                    	<td>12/90/2016</td>
+                                    	<td>Mañana</td>
+
+                                    </tr>
+                                    <tr>
+
+
+                                    	<td>Universidad Guayaquil</td>
+                                    	<td>13/90/2016</td>
+                                    	<td>Noche</td>
+
+                                    </tr>
+                                    <tr>
+
+
+                                    	<td>Mall del Sur</td>
+                                    	<td>13/90/2016</td>
+                                    	<td>Noche</td>
+
+                                    </tr>
+                                    <tr>
+
+
+                                    	<td>ESPOL-EDCOM</td>
+                                    	<td>13/90/2016</td>
+                                    	<td>Tarde</td>
+
+                                    </tr>
+                                    <tr>
+
+
+                                    	<td>Malecón 2000</td>
+                                    	<td>12/09/2106</td>
+                                    	<td>De tarde</td>
+
+                                    </tr>
+                                    <tr>
+
+
+                                    	<td>ESPOL-FIEC</td>
+                                    	<td>12/90/2016</td>
+                                    	<td>Mañana</td>
+
+                                    </tr>
 
 
 
-                          <div class="form-group">
-                              <div class="col-md-12 text-center">
-                                  <button type="submit" class="btn btn-primary btn-lg" id="btnPublicar">Publicar</button>
-                              </div>
-                          </div>
-                      </fieldset>
-                  </form>
-              </div>
-          </div>
+                                </tbody>
+                            </table>
+                        </div>
 
-      </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
       <footer class="footer footer-big footer-color-black" data-color="black">
           <div class="container">
               <div class="row">
                   <div class="col-md-2 col-sm-3">
                       <div class="info">
-                          <h5 class="title">Compañia</h5>
+                          <h5 class="title">L&F</h5>
                           <nav>
                               <ul>
                                   <li>
@@ -249,10 +287,123 @@
                    © <script> document.write(new Date().getFullYear()) </script> Todos los derechos reservados.
               </div>
           </div>
+          <div class="modal fade" id="myModalHorario" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+              <div class="modal-dialog" role="document">
+                  <div class="modal-content " align="center">
+                    <div class="well well-sm">
+                        <form class="form-horizontal" method="post">
+                            <fieldset>
+                                <legend class="text-center header">Datos importantes del objeto</legend>
+                                <div class="form-group">
+                                    <div class="col-md-10 col-md-offset-1">
+                                        <input id="fname" name="name" type="text" placeholder="¿Qué objeto es?-Obligatorio" class="form-control" required>
+                                    </div>
+                                </div>
+
+
+
+                            </fieldset>
+                        </form>
+                    </div>
+                    <h4>Suba la foto de su objeto para mayor seguridad(Opcional).</h4>
+                    <img id="preview" align="center" src="http://4.bp.blogspot.com/_DgK-l767uxI/SwE2E2o54YI/AAAAAAAAAjc/smgdNSdsHDs/s320/lostnfnd.png">  </img>
+                       <div>
+                         <input type="file" name="image_file" id="image_file" onchange="fileSelected();" value=""/>
+                       </div>
+
+                           <a href="listObjPerdidos.html" class="btn " >Enviar notificación a la persona que encontró su objeto</a>
+
+                  </div>
+              </div>
+          </div>
       </footer>
 
 </body>
+<script type="text/javascript">
+    var $table = $('#fresh-table'),
 
+        full_screen = false;
+        function fileSelected() {
+
+
+            var oFile = document.getElementById('image_file').files[0];
+  	        var oImage = document.getElementById('preview');
+  	    // prepare HTML5 FileReader
+            var oReader = new FileReader();
+            oReader.onload = function(e){
+  		// e.target.result contains the DataURL which we will use as a source of the image
+            oImage.src = e.target.result;
+
+
+    };
+	// read selected file as DataURL
+    oReader.readAsDataURL(oFile);
+	var vFD = new FormData(document.getElementById('upload_form'));
+
+
+}
+    $().ready(function(){
+
+        $table.bootstrapTable({
+            toolbar: ".toolbar",
+
+            showRefresh: true,
+            search: true,
+
+            showColumns: true,
+            pagination: true,
+            striped: true,
+            pageSize: 8,
+            pageList: [8,10,25,50,100],
+
+            formatShowingRows: function(pageFrom, pageTo, totalRows){
+                //do nothing here, we don't want to show the text "showing x of y from..."
+            },
+            formatRecordsPerPage: function(pageNumber){
+                return pageNumber + " filas visibles";
+            },
+            icons: {
+                refresh: 'fa fa-refresh',
+                toggle: 'fa fa-th-list',
+                columns: 'fa fa-columns',
+                detailOpen: 'fa fa-plus-circle',
+                detailClose: 'fa fa-minus-circle'
+            }
+        });
+
+
+
+        $(window).resize(function () {
+            $table.bootstrapTable('resetView');
+        });
+
+
+        window.operateEvents = {
+
+            'click .edit': function (e, value, row, index) {
+
+            }
+
+        };
+
+
+
+    });
+
+
+    function operateFormatter(value, row, index) {
+        return [
+
+            '<a rel="tooltip" title="Edit" class="table-action edit" href="javascript:void(0)" title="Edit" style="color:black" href="#" data-toggle="modal" data-target="#myModalHorario">',
+                '<i class="fa fa-eye" aria-hidden="true"></i>',
+            '</a>'
+
+        ].join('');
+    }
+
+
+</script>
 
 <!--   core js files    -->
 

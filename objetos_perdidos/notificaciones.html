@@ -11,7 +11,7 @@
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
 
-    <link href="assets/css/publicar.css" rel="stylesheet"/>
+    <link href="assets/css/notificaciones.css" rel="stylesheet"/>
       <link href="assets/css/gaia.css" rel="stylesheet"/>
     <script src="assets/js/jquery.min.js" type="text/javascript"></script>
 
@@ -22,7 +22,8 @@
     <script src="assets/js/bootstrap.js" type="text/javascript"></script>
 
     <script type="text/javascript" src="assets/js/gaia.js"></script>
-
+    <!-- Animation library for notifications   -->
+       <link href="assets/css/animate.min.css" rel="stylesheet"/>
 
 </head>
 
@@ -61,6 +62,8 @@
                           <ul class="dropdown-menu">
                             <li><a href="notificaciones.html">Encontraron tu objeto</a></li>
                             <li><a href="notificaciones.html">Encontraste al dueño del objeto</a></li>
+
+
                           </ul>
                     </li>
                     <li>
@@ -108,59 +111,40 @@
             </div>
         </div>
 
-        <div class="container" id="form" aling="center">
-          <div class="col-md-2"></div>
-          <div class="col-md-12">
-              <div class="well well-sm">
-                  <form class="form-horizontal" method="post">
-                      <fieldset>
-                          <legend class="text-center header">Datos importantes del objeto</legend>
-                          <div class="form-group">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="fname" name="name" type="text" placeholder="¿Qué objeto es?-Obligatorio" class="form-control" required>
-                              </div>
-                          </div>
+        <div class="content">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>Notificaciones de tus objetos perdidos</h3>
 
+                                <div class="alert alert-info alert-with-icon" data-notify="container">
+                                    <button type="button" aria-hidden="true" class="close">×</button>
+                                    <span data-notify="icon" class="pe-7s-bell"></span>
+                                    <a href="#" style="color:black" data-toggle="modal" data-target="#objPerdido"><span data-notify="message">Alguien ha encontrado tu objeto.</span></a>
+                                </div>
+                                <div class="alert alert-success">
+                                   <button type="button" aria-hidden="true" class="close">×</button>
+                                   <span data-notify="icon" class="pe-7s-bell"></span>
+                                   <a><span><b>Genial!</b>Juan ha definido para el día Jueves 23 de Agosto , a las 12:30pm</span></a>
+                               </div>
+                            </div>
+                            <div class="col-md-6">
+                                <h3>Notificaciones de tus objetos encontrados</h3>
+                                <div class="alert alert-info alert-with-icon" data-notify="container">
+                                    <button type="button" aria-hidden="true" class="close">×</button>
+                                    <span data-notify="icon" class="pe-7s-bell"></span>
+                                    <a href="#" style="color:black" data-toggle="modal" data-target="#objEncontrado"><span data-notify="message">Alguien ha pedido que verifiques si en realidad ese objeto le pertenece.</span></a>
+                                </div>
+                                <div class="alert alert-success">
+                                   <button type="button" aria-hidden="true" class="close">×</button>
+                                   <span data-notify="icon" class="pe-7s-bell"></span>
+                                   <a href="#" style="color:black" data-toggle="modal" data-target="#formLugar"><span><b>Genial!</b>Encontraste el dueño</span></a>
+                               </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
 
-                          <div class="form-group">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="lname" name="name" type="text" placeholder="Modelo del objeto" class="form-control" >
-                              </div>
-                          </div>
-                          <div class="form-group ">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="" name="email" type="date"  class="form-control" required>
-                              </div>
-                          </div>
-
-
-                          <div class="form-group ">
-                              <div class="col-md-10 col-md-offset-1">
-                                  Hora <input id="horaIngreso" name="email" type="time" placeholder="Hora" class="form-control" >
-                              </div>
-                          </div>
-
-
-
-                          <div class="form-group">
-                              <div class="col-md-10 col-md-offset-1">
-                                  <input id="phone" name="phone" type="text" placeholder="Lugar" class="form-control" >
-                              </div>
-                          </div>
-
-
-
-                          <div class="form-group">
-                              <div class="col-md-12 text-center">
-                                  <button type="submit" class="btn btn-primary btn-lg" id="btnPublicar">Publicar</button>
-                              </div>
-                          </div>
-                      </fieldset>
-                  </form>
-              </div>
-          </div>
-
-      </div>
+                    </div>
       <footer class="footer footer-big footer-color-black" data-color="black">
           <div class="container">
               <div class="row">
@@ -250,12 +234,121 @@
               </div>
           </div>
       </footer>
+      <div class="modal fade" id="objPerdido" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 
+          <div class="modal-dialog" role="document">
+              <div class="modal-content " align="center">
+                <h4>¿Este es su objeto?.Por favor confirmelo.</h4>
+                <img id="preview" align="center" src="http://www.celrock.com/wp-content/uploads/2013/03/Sony-Xperia-SP-3.png">  </img>
+                   <div>
+                     <a href="notificaciones.html" class="btn " >Sí,es mio</a>
+                   </div>
+
+
+
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="formLugar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+          <div class="modal-dialog" role="document">
+              <div class="modal-content " align="center">
+                <h4>Definir hora y fecha.</h4>
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post">
+                        <fieldset >
+
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="fname" name="time" type="text" placeholder="Hora" class="form-control" >
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="fname" name="name" type="date" placeholder="Fecha" class="form-control" >
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="fname" name="name" type="text" placeholder="¿Algún Mensaje?" class="form-control" >
+                                </div>
+                            </div>
+
+
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div>
+                  <a href="notificaciones.html" class="btn " >Enviar</a>
+                </div>
+
+
+              </div>
+          </div>
+      </div>
+      <div class="modal fade" id="objEncontrado" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+          <div class="modal-dialog" role="document">
+              <div class="modal-content " align="center">
+                <h4>¿Este objeto es el que encontrsaate?.Por favor confirmelo.</h4>
+                <div class="well well-sm">
+                    <form class="form-horizontal" method="post">
+                        <fieldset disabled>
+                            <legend class="text-center header">Datos importantes del objeto</legend>
+                            <div class="form-group">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <input id="fname" name="name" type="text" placeholder="" class="form-control" value="Table Samsung Galaxy">
+                                </div>
+                            </div>
+
+
+
+
+                        </fieldset>
+                    </form>
+                </div>
+
+                <img id="preview" align="center" src="http://www.nvidia.es/docs/IO/114039/header_productshot1b.png">  </img>
+                   <div>
+                     <a href="notificaciones.html" class="btn " >Sí,ese es</a>
+                   </div>
+
+
+
+              </div>
+          </div>
+      </div>
 </body>
 
-
+<!--  Notifications Plugin    -->
+    <script src="assets/js/bootstrap-notify.js"></script>
 <!--   core js files    -->
+<script type="text/javascript">
+    	$(document).ready(function(){
 
+
+
+        	$.notify({
+            	icon: 'pe-7s-unlock',
+            	message: "Ya encontró  <b>dueño</b> el objeto que oencontraste,favor verificalo"
+
+            },{
+                type: 'info',
+                timer: 4000
+            });
+            $.notify({
+              	icon: 'pe-7s-unlock',
+              	message: "Ya alguien encontró  tu objeto perdido,favor verificalo"
+
+              },{
+                  type: 'info',
+                  timer: 4000
+              });
+
+    	});
+	</script>
 
 
 <!--  js library for devices recognition -->
